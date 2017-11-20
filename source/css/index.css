@@ -1,0 +1,7 @@
+.container .row a{
+    text-decoration: none;
+
+}
+.container .row a:hover{
+    color:#F7A02B ;
+}
