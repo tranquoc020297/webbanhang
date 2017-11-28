@@ -1,74 +1,24 @@
 <?php
-class Database{
-    public $_dbh = '';
-    public $_sql = '';
-    public $_cursor = NULL;        
-    
-    public function database() {
-        $this->_dbh = new PDO('mysql:host=localhost; dbname=db_xehoi','root','');
-        $this->_dbh->query('set names "utf8"');
-    }
-    
-    public function setQuery($sql) {
-        $this->_sql = $sql;
-    }
-    
-    //Function execute the query 
-    public function execute($options=array()) {
-        $this->_cursor = $this->_dbh->prepare($this->_sql);
-        if($options) {  //If have $options then system will be tranmission parameters
-            for($i=0;$i<count($options);$i++) {
-                $this->_cursor->bindParam($i+1,$options[$i]);
-            }
+define('db_host', 'localhost');
+define('db_user', 'root');
+define('db_pass', '');
+define('db_name', 'db_banhang');
+
+class Database{	
+    protected static $host = db_host;
+    protected static $user = db_user;
+    protected static $pass = db_pass;
+    protected static $dbname = db_name;
+    protected static $conn;
+    protected static $error;
+
+    public static function connect(){
+        self::$conn = new mysqli(self::$host, self::$user, self::$pass, self::$dbname);
+        if(!self::$conn){
+            self::$error = "Fatal Error: Can't connect to database" . self::connect()->connect_error();
+            return false;
         }
-        $this->_cursor->execute();
-        return $this->_cursor;
+        self::$conn->query("SET NAMES 'utf8'");
     }
-    
-    //Funtion load datas on table
-    public function loadAllRows($options=array()) {
-        if(!$options) {
-            if(!$result = $this->execute())
-                return false;
-        }
-        else {
-            if(!$result = $this->execute($options))
-                return false;
-        }
-        return $result->fetchAll(PDO::FETCH_OBJ);
-    }
-    
-    //Funtion load 1 data on the table
-    public function loadRow($option=array()) {
-        if(!$option) {
-            if(!$result = $this->execute())
-                return false;
-        }
-        else {
-            if(!$result = $this->execute($option))
-                return false;
-        }
-        return $result->fetch(PDO::FETCH_OBJ);
-    }
-    
-    //Function count the record on the table
-    public function loadRecord($option=array()) {
-        if(!$option) {
-            if(!$result = $this->execute())
-                return false;
-        }
-        else {
-            if(!$result = $this->execute($option))
-                return false;
-        }
-        return $result->fetch(PDO::FETCH_COLUMN);
-    }
-    
-    public function getLastId() {
-        return $this->_dbh->lastInsertId();
-    }
-    
-    public function disconnect() {
-        $this->_dbh = NULL;
-    }
-}?>
+}	
+?>

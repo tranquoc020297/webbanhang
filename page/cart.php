@@ -13,12 +13,12 @@
                         <p>GIÁ 1.550.000.000 VNĐ</p>
                     </div>
                 </div>
-                <div style="margin-top:10px"> Thành Tiền: &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 1.550.000.000 VNĐ</div>
+                <div>&nbsp;</div>
+                <div> Thành Tiền: &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.550.000.000 VNĐ</div>
             </div>
 
 
-            <div></div>
-            <div></div>
+          
             </div>
             <div class="col-md-6"style=" padding: 5px 5px 10px 5px">
                     <div class="panel panel-default">

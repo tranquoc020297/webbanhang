@@ -1,3 +1,7 @@
+<?php
+	include('page/Highlights.php');
+?>
+
 <div class="content display-container">
     <div class="mySlides animate-fading">
         <img src="source/images/slider/1.jpg" style="width:100%">
@@ -12,7 +16,7 @@
         </div>
     </div>
     <div class="mySlides animate-fading">
-        <img src="source/images/slider/3.jpg" style="width:100%">
+        <a href=""></a><img src="source/images/slider/3.jpg" style="width:100%">
         <div class="slide-caption-left">
             <h1><strong>Ferrari</strong></h1>
         </div>
@@ -50,6 +54,3 @@
     </div>
 </div>
 <div style="height:10%">&nbsp;</div>
-<?php
-	include('page/Highlights.php');
-?>

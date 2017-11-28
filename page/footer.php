@@ -4,7 +4,7 @@
 		<div class="col-md-4">
 		<p>Địa Chỉ: 38/3 Nguyễn Thị Định Quận 2 TP Hồ Chí Minh</p>
 		<p>Email: <a href="">salonquan2.gmail.com</a></p>
-		<p>website: <a href="">SaLonQ2.com.vn</a></p>
+		<p>website: <a href="http://localhost:21212/webbanhang/index.php">SaLonQ2.com.vn</a></p>
 		</div>
 		<div class="col-md-4">
 		<p>hotline: 19001585</p>
