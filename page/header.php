@@ -47,6 +47,8 @@
 			
 			
 			<div>&nbsp;&nbsp;</div>
+			<a href="http://localhost:21212/webbanhang/index.php?cart">
 			<button class="btn btn-outline-info"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i>Giỏ Hàng</span></button>
+			</a>
 		</div>
 	</nav>
