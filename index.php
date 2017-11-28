@@ -23,6 +23,15 @@
 				include('page/detail.php');
 			elseif(isset($_GET['type'])):
 				include('page/type.php');
+
+			elseif(isset($_GET['sign'])):
+				include('page/signup.php');
+
+			elseif(isset($_GET['login'])):
+				include('page/login.php');
+
+			elseif(isset($_GET['cart'])):
+				include('page/cart.php');
 			else:
 				include('page/home.php');
 			endif;
